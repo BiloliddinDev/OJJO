@@ -1,0 +1,100 @@
+.form {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../../images/salons-img.png);
+  color: white;
+  padding: 100px 0;
+
+  &__text {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 140%;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 15px;
+  }
+
+  &__heading {
+    font-family: "Noto Serif";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 41px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 50px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+  }
+
+  &__list {
+    list-style: georgian;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__iteam {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #ffffff;
+  }
+
+  &__right {
+    padding: 10px;
+    border: 1px solid white;
+  }
+
+  &__form1 {
+    display: flex;
+    padding: 22px 20px;
+    background-color: white;
+    gap: 20px;
+  }
+
+  &__input {
+    border: 1px solid #d6d6d6;
+    padding: 10px 8px;
+  }
+
+  &__btn {
+    padding: 14px 35px;
+    background-color: black;
+    border: none;
+    color: white;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .form {
+    &__wrapper {
+      flex-direction: column;
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .form {
+    text-align: center;
+    &__form1 {
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,134 @@
+.orders {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 140%;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 15px;
+  }
+
+  &__heading {
+    font-family: "Noto Serif";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 41px;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin-bottom: 50px;
+  }
+
+  &__iteam {
+    padding: 20px 36px;
+    border: 1px solid #d6d6d6;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #333333;
+    transition: 1s ease;
+
+    &:hover {
+      background-color: black;
+      color: white;
+      border: 1px solid #d6d6d6;
+    }
+  }
+
+  .fa-diagram-next {
+    font-size: 35px;
+    margin-bottom: 40px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  &__box {
+    position: relative;
+    z-index: -2;
+  }
+
+  &__info {
+    position: absolute;
+    bottom: 30px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #ffffff;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .orders {
+    &__list {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__wrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .orders {
+    &__wrapper {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .orders {
+    &__list {
+      width: 280px;
+      height: 400px;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 10px;
+      display: none;
+      transition: 0.6s auto;
+    }
+
+    &__iteam {
+      padding: 10px 0;
+      width: 200px;
+    }
+
+    #name:checked ~ .orders__list {
+      display: flex;
+    }
+
+    &__img {
+      width: 280px;
+    }
+  }
+}
